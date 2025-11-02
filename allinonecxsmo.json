@@ -1,0 +1,234 @@
+[
+  {
+    "name": "Zilean (Movies)",
+    "type": "json_imdb",
+    "imdbType": "movie",
+    "itemType": "info_hash",
+    "infoHashTargetKey": "info_hash",
+    "torrentNameTargetKey": "raw_title",
+    "sizeAttr": "size",
+    "searchPattern": {
+      "movie": "ImdbId=%imdbId&Year=%year"
+    },
+    "url": "https://zilean.elfhosted.com/dmm/filtered?%searchPattern"
+  },
+  {
+    "name": "Zilean (TV)",
+    "type": "json_imdb",
+    "imdbType": "tv",
+    "itemType": "info_hash",
+    "infoHashTargetKey": "info_hash",
+    "torrentNameTargetKey": "raw_title",
+    "sizeAttr": "size",
+    "searchPattern": {
+      "tv": "ImdbId=%imdbId&Season=%season&Episode=%episode"
+    },
+    "url": "https://zilean.elfhosted.com/dmm/filtered?%searchPattern"
+  },
+  {
+    "name": "Mediafusion (Movies)",
+    "type": "json_imdb",
+    "imdbType": "movie",
+    "itemType": "info_hash",
+    "infoHashTargetKey": "infoHash",
+    "jsonResultsKey": "streams",
+    "torrentNameTargetKey": "behaviorHints.filename",
+    "sizeAttr": "behaviorHints.videoSize",
+    "searchPattern": {
+      "movie": "movie/%imdbId"
+    },
+    "url": "https://mediafusion.elfhosted.com/D-h5XZdc-GKj9tvLuwtL8S-h3Y5RyeMAHw8N_VRjmeON2p2lxdB57OCbAAseop_Rlc5ILHWBji7SX7NX6oG80KBfZpxxzuS-BJLzjSSrxaMhDUzPple7XCZlJq0KkZhF3LpgW78jw2yPHvczj5rZxxbsjwt1VgjkbAcCWyTOPYA-mQSWcYzi-_SVwHNkiKT0HHczOrUzQUOoN9p9G0y6kXqNrzU9Dil1qqGp3MdJrmK_L8li3-9LRvp0bNdtA7_cnhzTPse0vgbcEQKJMLbJwahDnEoaiDfr1jYFPtvaVjFKywts-nU6aXDfGouyXphOhrrgvUJr9UTdGU8zm-c3dKyfiwIJ5zCpBfg1gPESl-67TsResyGmzCYL5fzsXdYGFObUcouAsIZMznN4W96XsJYERj9EC_Yrvz5dvnvWNtWEPJlKHV8H1cLfP15iJQEFGdg33otL9HSUk0TmQlZKsvf-gHHLCzMk4y-Tb1gqoQRTk/stream/%searchPattern.json"
+  },
+  {
+    "name": "Mediafusion (TV)",
+    "type": "json_imdb",
+    "imdbType": "tv",
+    "itemType": "info_hash",
+    "infoHashTargetKey": "infoHash",
+    "jsonResultsKey": "streams",
+    "torrentNameTargetKey": "behaviorHints.filename",
+    "sizeAttr": "behaviorHints.videoSize",
+    "searchPattern": {
+      "tv": "series/%imdbId:%season:%episode"
+    },
+    "url": "https://mediafusion.elfhosted.com/D-h5XZdc-GKj9tvLuwtL8S-h3Y5RyeMAHw8N_VRjmeON2p2lxdB57OCbAAseop_Rlc5ILHWBji7SX7NX6oG80KBfZpxxzuS-BJLzjSSrxaMhDUzPple7XCZlJq0KkZhF3LpgW78jw2yPHvczj5rZxxbsjwt1VgjkbAcCWyTOPYA-mQSWcYzi-_SVwHNkiKT0HHczOrUzQUOoN9p9G0y6kXqNrzU9Dil1qqGp3MdJrmK_L8li3-9LRvp0bNdtA7_cnhzTPse0vgbcEQKJMLbJwahDnEoaiDfr1jYFPtvaVjFKywts-nU6aXDfGouyXphOhrrgvUJr9UTdGU8zm-c3dKyfiwIJ5zCpBfg1gPESl-67TsResyGmzCYL5fzsXdYGFObUcouAsIZMznN4W96XsJYERj9EC_Yrvz5dvnvWNtWEPJlKHV8H1cLfP15iJQEFGdg33otL9HSUk0TmQlZKsvf-gHHLCzMk4y-Tb1gqoQRTk/stream/%searchPattern.json"
+  },
+  {
+    "name": "Torrentio (Movies)",
+    "type": "json_imdb",
+    "imdbType": "movie",
+    "itemType": "info_hash",
+    "infoHashTargetKey": "infoHash",
+    "jsonResultsKey": "streams",
+    "torrentNameTargetKey": "title",
+    "sizePattern": "💾\\s*([\\d.]+)\\s*(GB|MB)",
+    "searchPattern": {
+      "movie": "movie/%imdbId"
+    },
+    "url": "https://torrentio.strem.fun/sort=qualitysize|limit=7/stream/%searchPattern.json"
+  },
+  {
+    "name": "Torrentio (TV)",
+    "type": "json_imdb",
+    "imdbType": "tv",
+    "itemType": "info_hash",
+    "infoHashTargetKey": "infoHash",
+    "jsonResultsKey": "streams",
+    "torrentNameTargetKey": "title",
+    "sizePattern": "💾\\s*([\\d.]+)\\s*(GB|MB)",
+    "searchPattern": {
+      "tv": "series/%imdbId:%season:%episode"
+    },
+    "url": "https://torrentio.strem.fun/sort=qualitysize|limit=7/stream/%searchPattern.json"
+  },
+  {
+    "name": "Jackett (Movies)",
+    "type": "json",
+    "itemType": "info_hash",
+    "infoHashTargetKey": "InfoHash",
+    "torrentNameTargetKey": "Title",
+    "jsonResultsKey": "Results",
+    "url": "http://70.173.142.117:9117/api/v2.0/indexers/all/results?apikey=ym8n9drv2rqs6pqcw3fn3ypjg74qcmfq&Query=%searchPattern&Category[]=2000"
+  },
+  {
+    "name": "Jackett (TV)",
+    "type": "json",
+    "itemType": "info_hash",
+    "infoHashTargetKey": "InfoHash",
+    "torrentNameTargetKey": "Title",
+    "jsonResultsKey": "Results",
+    "url": "http://70.173.142.117:9117/api/v2.0/indexers/all/results?apikey=ym8n9drv2rqs6pqcw3fn3ypjg74qcmfq&Query=%searchPattern&Category[]=5000"
+  },
+  {
+    "name": "YTS",
+    "type": "json_imdb",
+    "imdbType": "movie",
+    "itemType": "info_hash",
+    "jsonResultsKey": "data.movies",
+    "infoHashTargetKey": "hash",
+    "torrentNameTargetKey": "title_long",
+    "searchPattern": {
+      "movie": "api/v2/list_movies.json?query_term=%imdbId"
+    },
+    "url": "https://yts.mx/%searchPattern"
+  },
+  {
+    "name": "ThePirateBay (Movies)",
+    "type": "json",
+    "itemType": "info_hash",
+    "infoHashTargetKey": "info_hash",
+    "torrentNameTargetKey": "name",
+    "jsonResultsKey": null,
+    "url": "https://apibay.org/q.php?q=%searchPattern&cat=207,202,201"
+  },
+  {
+    "name": "ThePirateBay (TV)",
+    "type": "json",
+    "itemType": "info_hash",
+    "infoHashTargetKey": "info_hash",
+    "torrentNameTargetKey": "name",
+    "jsonResultsKey": null,
+    "url": "https://apibay.org/q.php?q=%searchPattern&cat=208,205"
+  },
+  {
+    "name": "Solidtorrents",
+    "type": "json",
+    "itemType": "info_hash",
+    "infoHashTargetKey": "infohash",
+    "torrentNameTargetKey": "title",
+    "jsonResultsKey": "results",
+    "sizeAttr": "size",
+    "url": "https://solidtorrents.net/api/v1/search?q=%searchPattern&sort=seeders"
+  },
+  {
+    "name": "Bitlord",
+    "type": "html",
+    "itemType": "magnet",
+    "magnetTargetKey": "a.magnet-button",
+    "url": "https://bitlordsearch.com/search?q=%searchPattern"
+  },
+  {
+    "name": "Zooqle",
+    "type": "html",
+    "itemType": "magnet",
+    "magnetTargetKey": "a[title=Magnet]",
+    "url": "https://zooqle.com/search?q=%searchPattern"
+  },
+  {
+    "name": "TorrentGalaxy",
+    "type": "html",
+    "itemType": "magnet",
+    "magnetTargetKey": "a[href^='magnet:']",
+    "url": "https://torrentgalaxy.to/torrents.php?search=%searchPattern"
+  },
+  {
+    "name": "EZTV",
+    "type": "html",
+    "itemType": "magnet",
+    "magnetTargetKey": "a.magnet",
+    "url": "https://eztv.re/search/%searchPattern"
+  },
+  {
+    "name": "Glodls",
+    "type": "html",
+    "itemType": "magnet",
+    "magnetTargetKey": "a[href^='magnet:']",
+    "url": "https://glodls.to/search_results.php?search=%searchPattern"
+  },
+  {
+    "name": "RuTor",
+    "type": "html",
+    "itemType": "magnet",
+    "magnetTargetKey": "a[href^='magnet:']",
+    "url": "http://rutor.info/search/%searchPattern"
+  },
+  {
+    "name": "BitSearch",
+    "type": "html",
+    "itemType": "magnet",
+    "magnetTargetKey": "a.dl-magnet",
+    "url": "https://bitsearch.to/search?q=%searchPattern&sort=seeders"
+  },
+  {
+    "name": "Pirateiro",
+    "type": "html",
+    "itemType": "magnet",
+    "magnetTargetKey": "a.imagnet",
+    "url": "http://pirateiro.com/torrents/?search=%searchPattern"
+  },
+  {
+    "name": "AnimeTosho",
+    "type": "html",
+    "itemType": "magnet",
+    "magnetTargetKey": "a[href^='magnet:']",
+    "url": "https://animetosho.org/search?q=%searchPattern"
+  },
+  {
+    "name": "Torrentz2",
+    "type": "html",
+    "itemType": "magnet",
+    "magnetTargetKey": "a[href^='magnet:']",
+    "url": "https://torrentz2.eu/search?f=%searchPattern"
+  },
+  {
+    "name": "Btdb",
+    "type": "html",
+    "itemType": "magnet",
+    "magnetTargetKey": "a.magnet",
+    "url": "https://btdb.eu/search/%searchPattern/"
+  },
+  {
+    "name": "YourBittorrent",
+    "type": "html",
+    "itemType": "magnet",
+    "magnetTargetKey": "a[title=Magnet]",
+    "url": "https://yourbittorrent.com/?q=%searchPattern"
+  },
+  {
+    "name": "DIGBT",
+    "type": "html",
+    "itemType": "magnet",
+    "magnetTargetKey": "a[href^='magnet:']",
+    "url": "https://www.digbt.org/search/%searchPattern/"
+  }
+]
